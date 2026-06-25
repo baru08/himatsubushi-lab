@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>二つ名メーカーDX｜100万通り以上の二つ名を生成</title>
+  <meta name="description" content="厨二・和風・かわいい・最強・ネタなど、100万通り以上の組み合わせから二つ名を3つまとめて生成できる無料ツールです。">
+  <meta name="theme-color" content="#151025">
+  <meta property="og:title" content="二つ名メーカーDX">
+  <meta property="og:description" content="100万通り以上の組み合わせから、あなただけの二つ名を生成！">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="ひまつぶし開発室 トップへ">ひまつぶし開発室</a>
+  </header>
+
+  <main class="app-shell">
+    <section class="hero card">
+      <p class="eyebrow">無料で遊べる二つ名生成ツール</p>
+      <h1>二つ名メーカーDX</h1>
+      <p class="lead"><strong>100万通り以上</strong>の組み合わせから、あなただけの二つ名を生成しよう。</p>
+      <div class="ad-box" aria-label="広告枠">広告スペース</div>
+    </section>
+
+    <section class="maker card" aria-labelledby="maker-title">
+      <h2 id="maker-title">二つ名を生成</h2>
+      <label class="input-label" for="nameInput">名前を入力（任意）</label>
+      <input id="nameInput" class="name-input" type="text" maxlength="20" placeholder="例：たろう" autocomplete="off">
+
+      <fieldset class="category-field">
+        <legend>カテゴリ</legend>
+        <div class="category-grid" id="categoryGrid"></div>
+      </fieldset>
+
+      <button id="generateBtn" class="main-btn" type="button">3つ生成する</button>
+      <p class="mini-note">日本語が自然になりやすい型だけを使って生成します。</p>
+    </section>
+
+    <section class="result card" aria-live="polite">
+      <div class="result-head">
+        <h2>生成結果</h2>
+        <span id="rareBadge" class="rare-badge hidden">RARE</span>
+      </div>
+      <div id="resultList" class="result-list">
+        <p class="empty">カテゴリを選んで「3つ生成する」を押してください。</p>
+      </div>
+      <div class="action-row">
+        <button id="copyBtn" class="sub-btn" type="button" disabled>コピー</button>
+        <button id="shareBtn" class="sub-btn" type="button" disabled>Xでシェア</button>
+        <button id="againBtn" class="sub-btn accent" type="button">もう一回</button>
+      </div>
+    </section>
+
+    <section class="history card">
+      <div class="result-head">
+        <h2>最近の生成</h2>
+        <button id="clearHistoryBtn" class="tiny-btn" type="button">履歴クリア</button>
+      </div>
+      <ol id="historyList" class="history-list"></ol>
+    </section>
+
+    <section class="about card">
+      <h2>遊び方</h2>
+      <p>厨二・和風・かわいい・最強・ネタなどのカテゴリから、二つ名を一度に3つ生成できます。気に入った結果はコピーやXシェアで投稿できます。</p>
+      <p>カテゴリごとに専用の言葉と型を使うため、単純なランダム結合よりも自然な日本語になりやすい作りです。</p>
+      <div class="ad-box bottom-ad" aria-label="広告枠">広告スペース</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© ひまつぶし開発室</small>
+  </footer>
+
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
